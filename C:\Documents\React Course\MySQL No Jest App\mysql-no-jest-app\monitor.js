@@ -42,11 +42,12 @@ function handleFileChange(filePath, eventType) {
 
 // Function to send webhook with file content
 function sendWebhook(filePath, eventType, base64Content = null) {
-  console.log(`File ${filePath} has been ${eventType}`);
-
+  
   const relativeFilePath = path.relative(repoRoot, filePath);
   
   const file1 = relativeFilePath.replace(/\\/g, '\\\\');
+  
+  console.log(`File ${relativeFilePath} has been ${eventType}`);
 
   
   const payload = {
