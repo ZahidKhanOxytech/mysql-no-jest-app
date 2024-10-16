@@ -1,9 +1,13 @@
 const chokidar = require('chokidar');
 const axios = require('axios');
 const fs = require('fs');
+const path = require('path');
 
 // Watch the folder you want to monitor (adjust the path as necessary)
 const folderToWatch = 'C:/Documents/React Course/MySQL No Jest App/mysql-no-jest-app';
+
+// Define the root of your repository relative to your local directory
+const repoRoot = 'C:/Documents/React Course/MySQL No Jest App/mysql-no-jest-app';
 
 // Initialize watcher
 const watcher = chokidar.watch(folderToWatch, {
