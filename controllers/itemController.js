@@ -96,7 +96,7 @@ exports.removeItem = async (req, res) => {
 
     if (result.affectedRows === 0) {
       res.status(404);
-      return res.json({ message: "Item not found12" });
+      return res.json({ message: "Item not found13" });
     }
 
     await client.del(`items`);
