@@ -102,7 +102,7 @@ exports.removeItem = async (req, res) => {
     await client.del(`items`);
 
     res.status(200);
-    res.json({ message: "Item removed successfully11" });
+    res.json({ message: "Item removed successfully12" });
   } catch (err) {
     res.status(500);
     res.json({ message: err.message });
